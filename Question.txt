@@ -1,0 +1,188 @@
+🧪 SDP Open Book Examination
+Project Option: E-Commerce Frontend (Mock Backend Only)
+
+Duration: 5 Hours (Development)
+Evaluation: 2:00 – 4:00 PM (Demo + GitHub Review)
+Difficulty Level: Medium → Moderate Advanced (MCA Level)
+Backend: ❌ Not Allowed (Use Mock API / json-server / MSW Only)
+
+📌 Problem Statement
+
+Design and implement a Single Page E-Commerce Frontend Application using React.
+
+The application must simulate:
+
+Product listing
+
+Product details view
+
+Cart management
+
+Checkout flow
+
+Authentication UI (mock)
+
+Server-state fetching
+
+Performance optimization
+
+This project evaluates:
+
+Server state vs client state separation
+
+Context-based state management
+
+Routing architecture
+
+Form validation patterns
+
+Rendering optimization
+
+Clean component composition
+
+🎯 SECTION A — CORE REQUIREMENTS (70 Marks)
+1️⃣ Product Listing Page (20 Marks)
+Route
+/products
+
+Functional Requirements
+
+Display a list of products fetched from a mock API.
+
+Each product card must include:
+
+Product image
+
+Title
+
+Price
+
+Rating
+
+“View Details” button
+
+“Add to Cart” button
+
+Technical Requirements
+
+Fetch products using React Query
+
+Endpoint:
+
+GET /products
+
+
+Handle:
+
+Loading state
+
+Error state
+
+Empty state
+
+Use reusable ProductCard component
+
+Add basic category filter (optional bonus)
+
+2️⃣ Product Details Page (Nested Route) (10 Marks)
+Route
+/products/:productId
+
+Functional Requirements
+
+Display:
+
+Full product description
+
+Price
+
+Stock status
+
+Add to Cart button
+
+Technical Requirements
+
+Use useParams
+
+Fetch single product using React Query:
+
+GET /products/:id
+
+
+Ensure caching works properly
+
+3️⃣ Cart Management (Context API) (20 Marks)
+Functional Requirements
+
+Add product to cart
+
+Remove product from cart
+
+Increase / decrease quantity
+
+Display cart summary:
+
+Subtotal
+
+Total items
+
+Total price
+
+Technical Requirements
+
+Create CartContext
+
+Create custom hook:
+
+useCart()
+
+
+Cart must be global state
+
+Derived values (total price) must NOT be stored directly — calculate dynamically
+
+Explain in comments:
+
+Difference between client state (cart) and server state (products)
+
+4️⃣ Checkout Form (15 Marks)
+Route
+/checkout
+
+Form Fields
+
+Full Name
+
+Email
+
+Address
+
+Payment Method (Dropdown)
+
+Validation Requirements
+
+Use React Hook Form
+
+Use Yup validation
+
+Disable submit if invalid
+
+Show inline error messages
+
+On Submit:
+
+Simulate successful order
+
+Clear cart
+
+Redirect to success page
+
+5️⃣ React Query Server State Handling (5 Marks)
+
+You must:
+
+Use useQuery for products
+
+Use useMutation for checkout simulation
+
+Demonstrate cache invalidation or refetching
